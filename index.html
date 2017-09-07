@@ -1,0 +1,136 @@
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <link rel="stylesheet" href="css/framework7.material.rtl.min.css">
+    <link rel="stylesheet" href="fonts/f7-icons/css/framework7-icons.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!--  login page -->
+        <div class="pages">
+            <div data-page="login" class="page" id="login_page">
+                  <div class='login_header'>
+                    <div class='logo'>
+                      <img src="img/batcoders_logo.jpg" alt="batcoders logo">
+                    </div>
+                  </div>
+                  <div class='login_form'>
+                    <form>
+                      <div class='login_form_1'>
+                        <h3>
+                          <span class='login_txt'>تسجيل الدخول</span>
+                          <span class='or_txt'>أو</span>
+                          <a href="#signup" class='signup_link' onclick="active_signup();">انشاء حساب</a>
+                        </h3>
+                      </div>
+                      <div class='login_form_2'>
+                        <div class='user_icon'>
+                          <i class="f7-icons">person_fill</i>
+                        </div>
+                        <div class='username_input'>
+                          <input type='text' placeholder='اسم المستخدم أو الايميل'>
+                        </div>
+                      </div>
+                      <div class='login_form_3'>
+                        <div class='pass_icon'>
+                          <i class="f7-icons">lock_fill</i>
+                        </div>
+                        <div class='pass_input'>
+                          <input type='password' placeholder="كلمة المرور" id="pass">
+                        </div>
+                        <div class='visible_icon' onclick='toggle_eye("eye","pass");'>
+                          <i class="f7-icons" id="eye">eye</i>
+                        </div>
+                      </div>
+                      <div class='login_submit'>
+                        <input type='submit' value='دخول'>
+                      </div>
+                    </form>
+                  </div>
+            </div> <!-- end login page -->
+            
+            <!-- signup page -->
+             <div data-page="signup" class="page signup_page" id='signup_page'>
+                   <div class='signup_header'>
+                     <div class='signup_back_icon'>
+                       <a href="#" onclick="back_to_login();" style="color:#fd7332">
+                       <i class="f7-icons">chevron_right</i></a>
+                     </div>
+                     <div class='signup_txt'>
+                       <h2>انشاء حساب</h2>
+                     </div>
+                   </div>
+                   
+                   <div class='signup_form'>
+                     <form>
+                       <div class='signup_form_1'>
+                         <div class='firstname'>
+                           <input type='text' placeholder='الاسم الاول'>
+                         </div><div class='lastname'>
+                           <input type='text' placeholder='الاسم الاخير'>
+                         </div>
+                       </div>
+                       <div class='signup_form_2'>
+                         <div class='user_icon'>
+                           <i class="f7-icons">person_fill</i>
+                         </div>
+                         <div class='username_input'>
+                           <input type='text' placeholder='اسم المستخدم'>
+                         </div>
+                       </div>
+                       <div class='signup_form_3'>
+                         <div class='email_icon'>
+                           <i class="f7-icons">email_fill</i>
+                         </div>
+                         <div class='email_input'>
+                           <input type='text' placeholder='الايميل'>
+                         </div>
+                       </div>
+                       <div class='signup_form_4'>
+                         <div class='pass_icon'>
+                           <i class="f7-icons">lock_fill</i>
+                         </div>
+                         <div class='pass_input'>
+                           <input type='password' placeholder="كلمة المرور" id="pass_signup">
+                         </div>
+                         <div class='visible_icon' onclick='toggle_eye("eye_signup","pass_signup");'>
+                           <i class="f7-icons" id="eye_signup">eye</i>
+                         </div>
+                       </div>
+                        <div class='signup_form_5'>
+                           <div class='down_icon'>
+                           <i class="f7-icons">chevron_down</i>
+                           </div>
+                          <input type="text" placeholder="من تكون ؟" id="open-picker" readonly>
+                        </div>
+                       <div class='signup_submit'>
+                         <input type='submit' value='موافق'>
+                       </div>
+                     </form>
+                   </div>
+             </div>
+  <!-- end sign up page -->
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/scrollto/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
